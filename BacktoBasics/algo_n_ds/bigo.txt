@@ -15,6 +15,8 @@ Big O Intro
             for i in range(10)
                 print(i)
 
+         This is o(n) due to single iteration of a loop
+
     O(n) Drop Constant
         a for loop ran twice
         eg.
@@ -26,5 +28,70 @@ Big O Intro
 
         This is O(2n) but due to constant we drop the 2 and get O(n)
 
+    o(n^2) - o of n squared
+
+        nested for loops
+
+        eg.
+            for i in range(10):
+                for j in range(100):
+                    print(i,j)
+
+        Time complexity is less efficient than o(n)
+
+    Dropped Non Dominants:
 
 
+
+        eg.
+            for i in range(10):
+                for j in range(100):
+                    print(i,j)
+
+            for k in range(100):
+                print(k)
+
+        This will be o(n^2) + o(n), but since o(n^2) is the longest. We will drop non dominants that is o(n)
+
+
+    O(1) - Constant time
+
+        eg.
+            def add_items(n):
+                return n+n
+
+        Time complexity - very constant and it is best complexity
+
+    oLog(n) - O of logn needs to be sorted
+        O of log is dividing it by the base of 2 to get number of time it complete this operation
+        Log2to8 will be 3 or 2^3
+
+        Time complexity is very flat near to o(1)
+
+    o(nLog n) is for the most effiency for sorting algorithms
+
+
+    Different terms of input in Interviews:
+        def print_items(a,b):
+            for i in range(a):
+                print(i)
+
+            for j in range(b):
+                print(j)
+
+        in this case it will be O(a +b) not o(n)
+
+        or
+
+        def print_items(a,b):
+            for i in range(a):
+                for j in range(b):
+                print(i,j)
+
+        in this case it will be o(a^b) not o(n^2)
+
+
+
+    big o of list
+        list that uses list.append() or list.pop()
+            is o(1)
