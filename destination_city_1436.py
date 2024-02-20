@@ -4,6 +4,7 @@ from typing import List
 class Solution:
     """
     https://leetcode.com/problems/destination-city/
+
     """
     def destCity(self, paths: List[List[str]]) -> str:
         start = {i[0] for i in paths}
