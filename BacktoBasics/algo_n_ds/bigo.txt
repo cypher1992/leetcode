@@ -93,5 +93,11 @@ Big O Intro
 
 
     big o of list
-        list that uses list.append() or list.pop()
+        list that uses list.append() or list.pop() if its at the end of the list. Why cause there is no reindexing
             is o(1)
+        list that uses list.insert(number,index) or list.pop(number) is o of n. Why cause there is reindexing
+
+        if you are looking for the item it is o(n) while looking for the item interms of index is o(1) due to you can
+            get the item by index such as list[index]
+
+
