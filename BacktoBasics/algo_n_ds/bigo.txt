@@ -1,0 +1,30 @@
+Big O Intro
+    Time complexity - measure of number of operations it take to run the code
+        majority of focus
+    Space Complexity - measure how much memory it takes to run
+
+    Worse Case
+        Omega - running the best case
+        Theta - average  case
+        Omnicron(Big O) - worst case of running a code
+
+    O(n) -  number of time it ran
+         - Linear operation
+         single iteration
+         eg.
+            for i in range(10)
+                print(i)
+
+    O(n) Drop Constant
+        a for loop ran twice
+        eg.
+            for i in range(10)
+                print(i)
+
+            for j in range(100)
+                print(j)
+
+        This is O(2n) but due to constant we drop the 2 and get O(n)
+
+
+
