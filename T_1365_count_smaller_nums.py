@@ -18,6 +18,17 @@ class Solution:
             nums.append(temp)
         return counter_lt
 
+    def smallerNumbersThanCurrent2(self, nums: List[int]) -> List[int]:
+        counter_lt = []
+        counter_dict = {}
+        numbers = sorted(nums.copy())
+        for i in range(len(numbers)):
+            if numbers[i] == numbers[i-1] and i>0:
+                counter_lt.append(counter_lt[len(counter_lt)-1])
+            else:
+                counter_lt.append(len(numbers[:i]))
+            counter_dict[numbers[i]] = counter_lt[len(counter_lt)-1]
+        return [counter_dict.get(i) for i in nums]
 
 
 class MyTestCase(unittest.TestCase):
@@ -28,6 +39,7 @@ class MyTestCase(unittest.TestCase):
     case_3 = [7,7,7,7]
     output3 = [0,0,0,0]
     function = Solution.smallerNumbersThanCurrent
+    function2 = Solution.smallerNumbersThanCurrent2
 
 
     def test_case1(self):
@@ -43,6 +55,10 @@ class MyTestCase(unittest.TestCase):
         output = self.function(self.case_3)
         print(output)
         self.assertEqual(self.output3, output)  # add assertion here
+
+    def test_case4(self):
+        output = self.function2(self.case_1)
+        self.assertEqual(self.output1, output)  # add assertion here
 
 if __name__ == '__main__':
     unittest.main()
