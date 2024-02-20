@@ -44,21 +44,39 @@ class MyTestCase(unittest.TestCase):
 
     def test_case1(self):
         output = self.function(self.case_1)
-        self.assertEqual(self.output1, output)  # add assertion here
+        self.assertEqual(self.output1, output)  
 
     def test_case2(self):
         output = self.function(self.case_2)
         print(output)
-        self.assertEqual(self.output2, output)  # add assertion here
+        self.assertEqual(self.output2, output)  
 
     def test_case3(self):
         output = self.function(self.case_3)
         print(output)
-        self.assertEqual(self.output3, output)  # add assertion here
+        self.assertEqual(self.output3, output)  
 
     def test_case4(self):
         output = self.function2(self.case_1)
-        self.assertEqual(self.output1, output)  # add assertion here
+        self.assertEqual(self.output1, output)  
+    
+    def test_enumerate(self):
+        """
+        Enumerate associate position to the index location
+        eg
+        nums = range(1,9)
+        for index,num in enumerate(1,9)
+            print(index,num)
 
+        0 , 1
+        1, 2
+        3, 4
+        ....
+        8,7
+        """
+        nums = range(1,9)
+        for index, num in enumerate(nums):
+            print(index,num)
+    
 if __name__ == '__main__':
     unittest.main()
