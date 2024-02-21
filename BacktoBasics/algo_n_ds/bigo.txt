@@ -103,4 +103,8 @@ Big O Intro
 
     O(n^2) Loop within a loop
     o(n) proportional to n. As 0n grows, it will take that number of times of n
+    o(log n) Divide and conquer
+    o(1) is constant
 
+    big o cheat sheet:
+        https://www.bigocheatsheet.com/
