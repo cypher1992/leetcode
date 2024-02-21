@@ -67,6 +67,14 @@ class SolutionTestCase(unittest.TestCase):
         nums = range(1,9)
         for index, num in enumerate(nums):
             print(index,num)
+
+    def test_xOr_operation(self):
+        #print(1^1^2)
+        #print(1 ^ 1 ^ 2)
+        temp = 0
+        for i in [1,1,1,2]:
+            temp =temp^ i
+            print(temp)
     
 if __name__ == '__main__':
     unittest.main()
