@@ -1,0 +1,12 @@
+Classes
+    Blueprint for object to describe
+
+Pointers
+    num1 = 11
+    num2 = num1
+
+    This is where num2 is point to 11 in memory
+
+    In this case,
+    num2 -> num1 -> 11
+    

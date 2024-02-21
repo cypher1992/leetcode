@@ -1,0 +1,36 @@
+LinkedList Intro:
+    LinkedList doe not have index
+    Variable item called head, first item in the list
+    Variable item called tail, last item that points to nothing
+    Then there are nodes, that point to each other in between head and tail
+
+
+Big O:
+    Append a node that points tail to it
+    remove a node will be complex and need to be set to the previous node
+        need to iterate from head to node to get back to tail
+            o(n) due to iteration from head to tail
+
+    Adding item to head of the list is 0(1)
+    removing item from the head is o(1)
+
+    inserting nodes in middle of the list is o(n) cause of iteration
+
+Under the Hood:
+    Node is defined as dictionary with the value and pointer(next)
+
+  Head points to value 11 and tail points to 23 as the end
+        {
+            "value": 11
+            "next" {
+                    "value": 3
+                    "next" {
+                            "value": 23
+                            "next" None
+                           }
+                    }
+        }
+
+
+
+
