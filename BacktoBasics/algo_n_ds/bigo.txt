@@ -101,3 +101,6 @@ Big O Intro
             get the item by index such as list[index]
 
 
+    O(n^2) Loop within a loop
+    o(n) proportional to n. As 0n grows, it will take that number of times of n
+
