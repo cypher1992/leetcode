@@ -39,6 +39,11 @@ class SolutionTestCase(unittest.TestCase):
         output = self.function(self.case_1_mw,self.case_1_cw,self.case_1)
         self.assertEqual(self.output1, output)  
 
+    def test_case2(self):
+        output = self.function(self.case_2_mw,self.case_2_cw,self.case_2)
+        print(output)
+        self.assertEqual(self.output2, output)
+
 
 
     
