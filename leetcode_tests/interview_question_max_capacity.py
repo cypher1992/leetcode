@@ -44,7 +44,10 @@ class SolutionTestCase(unittest.TestCase):
         print(output)
         self.assertEqual(self.output2, output)
 
-
+    def test_case3(self):
+        output = self.function(self.case_3_mw,self.case_3_cw,self.case_3)
+        print(output)
+        self.assertEqual(self.output3, output)
 
     
     def test_enumerate(self):
