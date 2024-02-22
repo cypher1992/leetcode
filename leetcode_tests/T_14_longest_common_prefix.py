@@ -57,5 +57,12 @@ class SolutionTestCase(unittest.TestCase):
             print("String Item ", list1_item)
             print("String2 Item", list2_item)
 
+    def test_print_unpack(self):
+        dict1 = {'a': 1, 'b': 2, 'c': 3}
+        dict2 = {'x': 'apple', 'y': 'banana', 'z': 'cherry'}
+        paired_values = list(zip(dict1.values(), dict2.values()))
+        for i,j in paired_values:
+            print(i,j)
+
 if __name__ == '__main__':
     unittest.main()
