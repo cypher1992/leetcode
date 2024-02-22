@@ -21,5 +21,10 @@ class MyTestCase(unittest.TestCase):
         output = Solution().reverseString(["H","a","n","n","a","h"])
         self.assertEqual(["h","a","n","n","a","H"], output)  # add assertion here
 
+    def test_length_min(self):
+        strs = ["flower", "flow", "flight"]
+        sortedStrs = sorted(strs)
+        print(sortedStrs)
+
 if __name__ == '__main__':
     unittest.main()
