@@ -50,5 +50,12 @@ class SolutionTestCase(unittest.TestCase):
             print("String Item ", list1_item)
             print("String2 Item", list2_item)
 
+    def test_zip2(self):
+        string = {'a':"HelloA1",'b':"HelloA2" }
+        string2 = {'a':"HelloB1",'b':"HelloB2"}
+        for list1_item,list2_item  in zip(string,string2):
+            print("String Item ", list1_item)
+            print("String2 Item", list2_item)
+
 if __name__ == '__main__':
     unittest.main()
