@@ -64,7 +64,7 @@ class LinkedList:
         return temp
 
     def get(self,index):
-        if index > self.length or index < 0:
+        if index >= self.length or index < 0:
             return None
         temp = self.head
         for i in range(0,index):
