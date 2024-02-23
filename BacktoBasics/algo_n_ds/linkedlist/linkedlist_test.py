@@ -45,6 +45,17 @@ class MyTestCase(unittest.TestCase):
         myll.prepend(1)
         self.assertTrue(myll.head.value == 1 and myll.length ==3)
 
+    def test_pop_first_3items(self):
+        myll = LinkedList(3)
+        myll.append(2)
+        myll.append(1)
+        for i in range(myll.length+1):
+            rs =myll.pop_first()
+            if rs:
+                print(rs.value)
+            else:
+                print(rs)
+        self.assertIsNone(rs)
     #####
 
     def test_something(self):
