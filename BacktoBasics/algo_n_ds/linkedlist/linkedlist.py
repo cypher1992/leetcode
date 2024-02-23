@@ -40,7 +40,18 @@ class LinkedList:
         return temp
 
     def prepend(self, value):
-        pass
+        # add new item to the beginning of the list
+        new_node = Node(value)
+        if self.length == 0:
+            self.head = new_node
+            self.tail = new_node
+            self.length = 1
+        else:
+            new_node.next = self.head
+            self.head = new_node
+        return True
+
+
 
     def insert(self, value):
         pass
