@@ -67,7 +67,7 @@ class LinkedList:
         if index >= self.length or index < 0:
             return None
         temp = self.head
-        for i in range(0,index):
+        for _ in range(0,index):
             temp = temp.next
         return temp
 
