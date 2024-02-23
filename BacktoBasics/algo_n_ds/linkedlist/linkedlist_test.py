@@ -39,6 +39,14 @@ class MyTestCase(unittest.TestCase):
         print(myll.pop())
         print(myll.pop())
 
+    def test_prepend(self):
+        myll = LinkedList(2)
+        myll.append(3)
+        myll.prepend(1)
+        self.assertTrue(myll.head.value == 1 and myll.length ==3)
+
+    #####
+
     def test_something(self):
         def word_to_number(word):
             word = word.lower()

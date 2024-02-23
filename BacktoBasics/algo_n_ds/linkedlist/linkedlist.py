@@ -52,8 +52,6 @@ class LinkedList:
         self.length +=1
         return True
 
-
-
     def insert(self, value):
         pass
 
