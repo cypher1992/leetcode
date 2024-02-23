@@ -56,6 +56,13 @@ class MyTestCase(unittest.TestCase):
             else:
                 print(rs)
         self.assertIsNone(rs)
+
+    def test_get_index_node(self):
+        myll = LinkedList(3)
+        myll.append(2)
+        myll.append(1)
+        rs = myll.get(2)
+        self.assertEqual(rs.value,1)
     #####
 
     def test_something(self):
