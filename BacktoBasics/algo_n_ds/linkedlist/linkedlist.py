@@ -45,7 +45,6 @@ class LinkedList:
         if self.length == 0:
             self.head = new_node
             self.tail = new_node
-
         else:
             new_node.next = self.head
             self.head = new_node
