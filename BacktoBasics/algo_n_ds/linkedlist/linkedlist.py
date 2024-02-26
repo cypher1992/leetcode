@@ -71,3 +71,11 @@ class LinkedList:
             temp = temp.next
         return temp
 
+    def set_index(self, index,value):
+        #set a node at specific index
+        temp = self.get(index)
+        if temp:
+            temp.value = value
+            return True
+        return False
+
