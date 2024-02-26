@@ -103,5 +103,10 @@ class MyTestCase(unittest.TestCase):
 
         print(text_to_number("one billion two hundred thirty eight million"))
 
+
+    def test_replace(self):
+        st00r ="()()[]"
+        newstr = st00r.replace("()","")
+        print(newstr)
 if __name__ == '__main__':
     unittest.main()
