@@ -105,8 +105,28 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_replace(self):
-        st00r ="()()[]"
-        newstr = st00r.replace("()","")
-        print(newstr)
+        st00r ="()"
+        compareDict = {
+            "[":"]",
+            "{":"}",
+            "(":")",
+        }
+        def isValid( s: str) -> bool:
+            string = list(s)
+            temp = string.pop(0)
+            isV = False
+            for i in range(1, len(string)):
+                rs = string.pop(0)
+                print(rs,compareDict.get(temp))
+                if rs == compareDict.get(temp):
+                    isV = True
+                    break
+                temp = rs
+            if len(string) == 1:
+                rs = string.pop(0)
+                if rs == compareDict.get(temp):
+                    isV = True
+            return isV
+        print(isValid(st00r))
 if __name__ == '__main__':
     unittest.main()
