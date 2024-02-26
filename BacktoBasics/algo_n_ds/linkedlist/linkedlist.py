@@ -93,6 +93,21 @@ class LinkedList:
         else:
             return False
 
+    def remove(self,index):
+        if index < 0 or index >= self.length:
+            return None
+        if index == 0:
+            return self.pop_first()
+        elif index == self.length-1:
+            return self.pop()
+        else:
+            prev = self.get(index - 1)
+            temp = prev.next
+            prev.next = temp.next
+            temp.next = None
+            self.length -= 1
+            return temp
+
     def print_list(self):
         temp = self.head
         while temp is not None:
