@@ -96,6 +96,16 @@ class MyTestCase(unittest.TestCase):
         rs = myll.remove(2)
         self.assertEqual(rs.value, 23)
 
+    def test_reverse(self):
+        myll = LinkedList(1)
+        myll.append(2)
+        myll.append(3)
+        myll.append(4)
+        myll.print_list()
+        myll.reverse()
+        myll.print_list()
+        self.assertEqual(myll.get(0).next.value, 3)
+
     #####
 
     def test_something(self):
