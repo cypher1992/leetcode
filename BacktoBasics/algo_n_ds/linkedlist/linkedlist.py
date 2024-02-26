@@ -24,6 +24,7 @@ class LinkedList:
         return True
 
     def pop(self):
+        # remove the last item
         if self.length == 0:
             return None
         temp = self.head
@@ -52,6 +53,7 @@ class LinkedList:
         return True
 
     def pop_first(self):
+        # remove the first item of a list, return that remove item
         if self.length == 0:
             return None
         temp = self.head
