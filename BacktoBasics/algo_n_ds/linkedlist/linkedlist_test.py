@@ -73,6 +73,21 @@ class MyTestCase(unittest.TestCase):
         rs = myll.get(1)
         self.assertEqual(rs.value, 4)
 
+    def test_insert_index_1_return_1(self):
+        myll = LinkedList(0)
+        myll.append(2)
+        myll.insert(1,1)
+        rs = myll.get(1)
+        self.assertEqual(rs.value, 1)
+
+    def test_insert_index_1_return_3(self):
+        myll = LinkedList(0)
+        myll.append(1)
+        myll.append(2)
+        myll.insert(3,3)
+        rs = myll.get(3)
+        self.assertEqual(rs.value, 3)
+
     #####
 
     def test_something(self):
