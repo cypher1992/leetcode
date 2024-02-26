@@ -88,6 +88,14 @@ class MyTestCase(unittest.TestCase):
         rs = myll.get(3)
         self.assertEqual(rs.value, 3)
 
+    def test_remove_23(self):
+        myll = LinkedList(11)
+        myll.append(3)
+        myll.append(23)
+        myll.append(7)
+        rs = myll.remove(2)
+        self.assertEqual(rs.value, 23)
+
     #####
 
     def test_something(self):
