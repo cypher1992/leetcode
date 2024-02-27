@@ -192,7 +192,30 @@ class MyTestCase(unittest.TestCase):
         else:
             print(-1)
 
+    def test_itertool(self):
+        from itertools import permutations,combinations_with_replacement,product
 
+        def count_ways_to_sum(numbers, target_sum):
+            count = 0
+            for r in range(1, target_sum + 1):
+                for combination in product(numbers, repeat=r):
+                    if sum(combination) == target_sum:
+                        count += 1
+            return count
+
+        # Example usage:
+        numbers = [1, 2]
+        target_sum = 3
+        ways_to_sum = count_ways_to_sum(numbers, target_sum)
+        print("Number of ways to sum to", target_sum, ":", ways_to_sum)
+
+
+    def test_climb_stairs(self):
+        def climbStairs( n: int) -> int:
+            if n == 0 or n == 1:
+                return 1
+            return climbStairs(n - 1) + climbStairs(n - 2)
+        print(climbStairs(5))
 
 if __name__ == '__main__':
     unittest.main()
