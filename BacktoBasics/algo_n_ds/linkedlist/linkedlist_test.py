@@ -217,5 +217,21 @@ class MyTestCase(unittest.TestCase):
             return climbStairs(n - 1) + climbStairs(n - 2)
         print(climbStairs(5))
 
+    def test_bit(self):
+        binary_string = "00111001011110000000000000000000"
+        unsigned_integer = int(binary_string, 2)
+        print(unsigned_integer)
+
+    def test_number(self):
+        num = bin(10000)
+        print(type(num))
+        print(num[:3])
+
+
+    def test_find(self):
+        x = [1,2,3]
+        print(min(x))
+
+
 if __name__ == '__main__':
     unittest.main()
