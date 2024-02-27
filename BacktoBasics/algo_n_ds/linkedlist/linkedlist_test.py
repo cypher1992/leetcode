@@ -166,5 +166,10 @@ class MyTestCase(unittest.TestCase):
                 return True
             return False
         print(isValid(st00r))
+
+    def test_string_reverse(self):
+        string = str(121)
+        reverseStr = string[::-1]
+        print(reverseStr)
 if __name__ == '__main__':
     unittest.main()
