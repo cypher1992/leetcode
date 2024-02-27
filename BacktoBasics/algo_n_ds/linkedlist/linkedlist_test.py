@@ -183,6 +183,16 @@ class MyTestCase(unittest.TestCase):
                 x[i] = '_'
         print(x,count)
 
+    def test_needle_in_haysack(self):
+        needle = "sad"
+        haystack = "1sadbutsad"
+        location = haystack.find(needle)
+        if location>-1:
+            print(location)
+        else:
+            print(-1)
+
+
 
 if __name__ == '__main__':
     unittest.main()
