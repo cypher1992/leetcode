@@ -172,5 +172,17 @@ class MyTestCase(unittest.TestCase):
         reverseStr = string[::-1]
         print(reverseStr)
 
+    def test_enumerate(self):
+        x = [-1,-1,1,1,2,2,3,3,3,4,4,4,4,4,4]
+        numset = sorted(set(x),reverse=True)
+        count = len(numset)
+        for i in range(len(x)):
+            if numset:
+                x[i] = numset.pop()
+            else:
+                x[i] = '_'
+        print(x,count)
+
+
 if __name__ == '__main__':
     unittest.main()
