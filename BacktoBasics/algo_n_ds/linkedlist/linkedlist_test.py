@@ -227,7 +227,6 @@ class MyTestCase(unittest.TestCase):
         print(type(num))
         print(num[:3])
 
-
     def test_find(self):
         x = [1,2,3]
         print(min(x))
