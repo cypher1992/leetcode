@@ -231,6 +231,18 @@ class MyTestCase(unittest.TestCase):
         x = [1,2,3]
         print(min(x))
 
+    def test_index(self):
+        nums1 = [0, 0, 0, 1, 2, 2, 3, 5, 6]
+        nums1.sort()
+        print(nums1)
+
+        """lastZeroIndex = len(nums1) - nums1[::-1].index(0)
+        print(lastZeroIndex)
+        for i in range(lastZeroIndex):
+            nums1.pop(0)"""
+        nums1[:] = [num for num in nums1 if num > 0]
+        print(nums1)
+
 
 if __name__ == '__main__':
     unittest.main()
