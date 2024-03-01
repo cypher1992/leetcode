@@ -243,6 +243,26 @@ class MyTestCase(unittest.TestCase):
         nums1[:] = [num for num in nums1 if num > 0]
         print(nums1)
 
+    def test_2_sum(self):
+        x = [1,2,3,3]
+        target = 6
+        for i in range(0,len(x)):
+            for j in range(i,(len(x))):
+                if x[i]+ x[j] == target:
+                    print(x[i], x[j])
+                    break
+            x.pop(0)
+
+    def test_2_sum_hashmap(self):
+        x = [1, 2, 3, 3]
+        target = 6
+        hashmap = {v:i for i,v in enumerate(x)}
+        print(hashmap)
+        for i in range(len(x)):
+            if hashmap.get(target-x[i]):
+                print(x[i], x[hashmap[target-x[i]]])
+                break
+
 
 if __name__ == '__main__':
     unittest.main()
