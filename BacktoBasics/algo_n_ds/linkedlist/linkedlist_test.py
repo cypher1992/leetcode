@@ -236,7 +236,10 @@ class MyTestCase(unittest.TestCase):
         nums1.sort()
         print(nums1)
 
-
+        """lastZeroIndex = len(nums1) - nums1[::-1].index(0)
+        print(lastZeroIndex)
+        for i in range(lastZeroIndex):
+            nums1.pop(0)"""
         nums1[:] = [num for num in nums1 if num > 0]
         print(nums1)
 
