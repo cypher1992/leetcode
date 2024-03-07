@@ -264,5 +264,22 @@ class MyTestCase(unittest.TestCase):
                 break
 
 
+    def test_array_(self):
+
+        x = [ 1,2,3,4]
+
+        # reverse an array
+        print(x[::-1])
+
+        for i in range(len(x),0,-1):
+            print(i)
+
+        for i in range(len(x)):
+            for j in range(i+1,len(x)):
+                print(x[i],x[j])
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
