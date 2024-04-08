@@ -1,0 +1,20 @@
+Python Resource:
+    https://medium.com/@-TutortAcademy/choosing-the-best-books-for-mastering-python-algorithms-c7d0b5a64057
+
+Python Book:
+    Data Structures and Algorithms in Python by Michael T. Goodrich and Roberto Tamassia
+    https://nibmehub.com/opac-service/pdf/read/Data%20Structures%20and%20Algorithms%20in%20Python.pdf
+
+Chapter 1:
+    Class|Description|Immutable?
+    bool|Boolean value|Yes
+    int|integer (arbitrary magnitude)|Yes
+    float|floating-point number| Yes
+    list|mutable sequence of objects|No
+    tuple| immutable sequence of objects|Yes
+    str|character string|Yes
+    set |unordered set of distinct objects| No
+    frozenset|immutable form of set class| Yes
+    dict|associative mapping (aka dictionary)| No
+
+    Sequence Types
