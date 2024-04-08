@@ -18,3 +18,4 @@ Chapter 1:
     dict|associative mapping (aka dictionary)| No
 
     Sequence Types
+        are list, tuple, and str.
