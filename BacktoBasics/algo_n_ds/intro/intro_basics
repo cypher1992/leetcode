@@ -19,3 +19,20 @@ Chapter 1:
 
     Sequence Types
         are list, tuple, and str.
+        list = []
+            - list are zero index are similar to an array
+        Tuple = ()
+            - tuples are immutable version of a sequence
+        str = "" or '' or """""" or ''''''
+            - str is specifically designed to represent an immutable sequence of
+            characters
+    Set and Frozenset
+        set = {}
+            - set class represent the mathamatical notion of a set, namely
+            a collection of elements, without a duplicate
+            - No order
+        frozenset =
+            - is a immutable form of a set type, so it is legal to have set of frozenset
+            - frozenset()
+
+
