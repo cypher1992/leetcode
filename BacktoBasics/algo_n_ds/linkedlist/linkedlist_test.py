@@ -279,7 +279,11 @@ class MyTestCase(unittest.TestCase):
                 print(x[i],x[j])
 
 
-
+    def test_something_od(self):
+        try:
+            s =8/2
+        finally:
+            pass
 
 if __name__ == '__main__':
     unittest.main()
