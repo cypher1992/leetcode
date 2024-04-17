@@ -285,5 +285,18 @@ class MyTestCase(unittest.TestCase):
         finally:
             pass
 
+    def test_remove_replica(self):
+        replicas = [1,1,3,4,5,6,6]
+        temp = replicas[0]
+        count_replicas = 0
+        for i in range(1,len(replicas)):
+            if replicas[i] == temp:
+                replicas.append(replicas.pop(i))
+                count_replicas+=1
+            temp= replicas[i]
+        for _ in range(count_replicas):
+            replicas.pop()
+        print(replicas)
+
 if __name__ == '__main__':
     unittest.main()
