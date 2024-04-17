@@ -266,7 +266,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_array_(self):
 
-        x = [ 1,2,3,4]
+        x = [1,2,3,4]
 
         # reverse an array
         print(x[::-1])
