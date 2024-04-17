@@ -313,5 +313,30 @@ class MyTestCase(unittest.TestCase):
         print('copy', l2)
         print('deep copy', l3)
 
+    def test_list(self):
+        l1 = [1,2,3]
+        l2 = [1,1,2,2,3,3]
+        """
+        for i in range(1,len(l1)):
+            print(i,l1[i],l1[i-1])
+        """
+
+        for i in range(1,len(l2)):
+            if l2[i] == l2[i-1]:
+                print(l2[i])
+
+    def test_remove_dups(self):
+        array = [1, 2, 2, 3, 3, 4]
+        size = len(array)
+        insertIndex = 1
+        for i in range(1, size):
+            if array[i - 1] != array[i]:
+                # Updating insertIndex in our main array
+                array[insertIndex] = array[i]
+                # Incrementing insertIndex count by 1
+                insertIndex = insertIndex + 1
+        print(insertIndex)
+
+
 if __name__ == '__main__':
     unittest.main()
