@@ -1,3 +1,4 @@
+import copy
 import unittest
 from BacktoBasics.algo_n_ds.linkedlist.linkedlist import LinkedList
 
@@ -297,6 +298,19 @@ class MyTestCase(unittest.TestCase):
         for _ in range(count_replicas):
             replicas.pop()
         print(replicas)
+
+    def test_copy_v_deepcopy(self):
+        l1 = [1,2,3]
+        print('original',id(l1))
+        l2 = copy.copy(l1)
+        l3 = copy.deepcopy(l1)
+        print('copy',id(l2))
+        print('deep copy', id(l3))
+        l2.append(4)
+        l3.append(5)
+        print('original', l1)
+        print('copy', l2)
+        print('deep copy', l3)
 
 if __name__ == '__main__':
     unittest.main()
