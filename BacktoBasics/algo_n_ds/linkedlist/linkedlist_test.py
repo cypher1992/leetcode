@@ -287,6 +287,7 @@ class MyTestCase(unittest.TestCase):
             pass
 
     def test_remove_replica(self):
+        # this is o(n+k)
         replicas = [1,1,3,4,5,6,6]
         temp = replicas[0]
         count_replicas = 0
