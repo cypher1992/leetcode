@@ -365,5 +365,14 @@ class MyTestCase(unittest.TestCase):
         print(light_bulbs(3))
 
 
+    def test_factorial(self):
+        def factorial(n):
+            if n == 0:
+                return 1
+            return factorial(n-1)*n
+        self.assertEqual(factorial(5),120)
+
+
+
 if __name__ == '__main__':
     unittest.main()
