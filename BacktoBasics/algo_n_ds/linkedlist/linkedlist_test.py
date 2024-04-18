@@ -342,6 +342,14 @@ class MyTestCase(unittest.TestCase):
         """
         url: https://blog.k2datascience.com/coding-interview-switching-light-bulbs-93b256c6b88c
         :return:
+        Matrix of Light Bulbs
+              F F F F F F
+            1 T T T T T T
+            2 T F T F T F
+            3 T F F F T T
+            4 T F F T T T
+            5 T F F T F T
+            6 T F F T F F
         """
         def light_bulbs(N):
             lights = [False for i in range(0,N)]
@@ -355,15 +363,7 @@ class MyTestCase(unittest.TestCase):
                     k = w * i
             return lights
         print(light_bulbs(3))
-        """
-              F F F F F F
-            1 T T T T T T
-            2 T F T F T F
-            3 T F F F T T
-            4 T F F T T T
-            5 T F F T F T
-            6 T F F T F F  
-        """
+
 
 if __name__ == '__main__':
     unittest.main()
