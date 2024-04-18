@@ -338,5 +338,23 @@ class MyTestCase(unittest.TestCase):
         print(insertIndex)
 
 
+    def test_light_switch_problem(self):
+        """
+        url: https://blog.k2datascience.com/coding-interview-switching-light-bulbs-93b256c6b88c
+        :return:
+        """
+        def light_bulbs(N):
+            lights = [False for i in range(0,N)]
+            for i in range(1,N+1):
+                w = 1 # step
+                k = w*i # is the position of the lightblub
+
+                while k <= N:
+                    lights[k-1] = not lights[k-1]
+                    w+=1
+                    k = w * i
+            return lights
+        print(light_bulbs(5))
+
 if __name__ == '__main__':
     unittest.main()
