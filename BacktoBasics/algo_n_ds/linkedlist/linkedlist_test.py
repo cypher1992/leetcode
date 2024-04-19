@@ -409,5 +409,13 @@ class MyTestCase(unittest.TestCase):
         s2.push(s3.pop())
         print(str(s3),str(s2))
 
+    def test_ref_id(self):
+        import sys
+        array = [1,2,3]
+        num = 1
+        print(id(array[0]),id(num))
+        print(sys.getsizeof(array[0]),sys.getsizeof(num))
+
+
 if __name__ == '__main__':
     unittest.main()
