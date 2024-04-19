@@ -372,7 +372,5 @@ class MyTestCase(unittest.TestCase):
             return factorial(n-1)*n
         self.assertEqual(factorial(5),120)
 
-
-
 if __name__ == '__main__':
     unittest.main()
