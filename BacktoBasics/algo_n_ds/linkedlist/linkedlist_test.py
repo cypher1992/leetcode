@@ -431,7 +431,7 @@ class MyTestCase(unittest.TestCase):
                 else:
                     raise IndexError('Queue is empty')
 
-            def peek(self):
+            def top(self):
                 if not self.is_empty():
                     return self.__index[0]
                 else:
