@@ -427,7 +427,7 @@ class MyTestCase(unittest.TestCase):
 
             def dequeue(self,):
                 if not self.is_empty():
-                    return self.__index.pop()
+                    return self.__index.pop(0)
                 else:
                     raise IndexError('Queue is empty')
 
@@ -443,6 +443,22 @@ class MyTestCase(unittest.TestCase):
             def size(self):
                 return len(self.__index)
 
+            def __str__(self):
+                return f"{self.__index}"
+
+        queue = Queue()
+        print(queue.is_empty())
+        try:
+            print(queue.dequeue())
+        except Exception as e:
+            print(e)
+
+        for i in range(1,10):
+            queue.enqueue(i)
+
+        print(queue.peek())
+        print(queue.dequeue())
+        print(str(queue))
 
 
 if __name__ == '__main__':
