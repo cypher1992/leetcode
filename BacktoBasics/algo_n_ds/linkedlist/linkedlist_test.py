@@ -382,17 +382,17 @@ class MyTestCase(unittest.TestCase):
                 return len(self.__index)
 
             def push(self,item):
-                self.__index.insert(0,item)
+                self.__index.append(item)
 
-            def peek(self):
+            def top(self):
                 if len(self) == 0:
-                    raise Exception("peek() called on empty stack")
-                return self.__index[0]
+                    raise Exception("Empty stack")
+                return self.__index[-1]
 
             def pop(self):
                 if len(self)==0:
-                    raise Exception("pop() called on empty stack")
-                return self.__index.pop(0)
+                    raise Exception("Empty stack")
+                return self.__index.pop()
 
             def __str__(self):
                 return str(self.__index)
