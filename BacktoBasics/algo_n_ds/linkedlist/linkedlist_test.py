@@ -416,6 +416,34 @@ class MyTestCase(unittest.TestCase):
         print(id(array[0]),id(num))
         print(sys.getsizeof(array[0]),sys.getsizeof(num))
 
+    def test_queue(self):
+        class Queue:
+
+            def __init__(self):
+                self.__index = []
+
+            def enqueue(self,item):
+                self.__index.append(item)
+
+            def dequeue(self,):
+                if not self.is_empty():
+                    return self.__index.pop()
+                else:
+                    raise IndexError('Queue is empty')
+
+            def peek(self):
+                if not self.is_empty():
+                    return self.__index[0]
+                else:
+                    raise IndexError('Queue is empty')
+
+            def is_empty(self):
+                return len(self.__index) == 0
+
+            def size(self):
+                return len(self.__index)
+
+
 
 if __name__ == '__main__':
     unittest.main()
